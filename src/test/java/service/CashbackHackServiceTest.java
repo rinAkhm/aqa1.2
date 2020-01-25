@@ -1,5 +1,6 @@
 package service;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CashbackHackServiceTest {
 
     @Test
+    @DisplayName("should Return Zero If Amount 1000")
     void shouldReturnZeroIfAmount1000() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
@@ -18,6 +20,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
+    @DisplayName("should Return 900 If Amount 100")
     void shouldReturn900IfAmount100() {
         CashbackHackService service = new CashbackHackService();
         int amount = 100;
@@ -29,6 +32,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
+    @DisplayName("should Return 1500 If Amount 500")
     void shouldReturn1500IfAmount500() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1500;
@@ -40,6 +44,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
+    @DisplayName("should Give Massage If Amount Less Than Zero")
     void shouldGiveMassageIfAmountLessThanZero(){
         CashbackHackService service = new CashbackHackService();
         int amount = -2;
