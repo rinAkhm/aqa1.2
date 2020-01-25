@@ -38,4 +38,11 @@ class CashbackHackServiceTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    void shouldGiveMassageIfAmountLessThanZero(){
+        CashbackHackService service = new CashbackHackService();
+        int amount = -2;
+        assertThrows(IllegalArgumentException.class, ()-> service.remain(amount) );
+    }
 }
